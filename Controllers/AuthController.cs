@@ -50,7 +50,7 @@ namespace ElyessLink_API.Controllers
                 user = _user,
             };
 
-            _httpReponse.HttpContext.Response.Cookies.Append("refreshToken", token.token,
+            _httpReponse.HttpContext.Response.Cookies.Append("ElyessLink-cookie", token.token,
                 new CookieOptions
                 {
                     Expires = DateTimeOffset.UtcNow.AddDays(7),
@@ -63,6 +63,27 @@ namespace ElyessLink_API.Controllers
             _appDbContext.AuthTokens.Add(token);
             await _appDbContext.SaveChangesAsync();
             return Ok(_tokenMapper.TokenToDTO(token));
+        }
+
+
+        [HttpDelete]
+        public async Task<IActionResult> SignOut(TokenDeletDTO authToken)
+        {
+            var token = _appDbContext.AuthTokens.FirstOrDefault(t => t.token == authToken.Token);
+
+            if(token == null) { return BadRequest("Token not found"); }
+
+            _httpReponse.HttpContext.Response.Cookies.Append("ElyessLink-cookie", "", new CookieOptions
+            {
+                Expires = DateTimeOffset.UtcNow.AddDays(-1),
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.None
+            });
+
+            _appDbContext.AuthTokens.Remove(token);
+            await _appDbContext.SaveChangesAsync();
+            return Ok("Token deleted successfully");
         }
 
         [HttpPost("creatuser")]
@@ -84,5 +105,7 @@ namespace ElyessLink_API.Controllers
             _appDbContext.SaveChanges();
             return user;
         }
+
+        
     }
 }

@@ -7,4 +7,9 @@
         public DateTime expirationDate { get; set; }
         public UserGetDTO User { get; set; }
     }
+
+    public class TokenDeletDTO
+    {
+        public string Token { get; set; }
+    }
 }

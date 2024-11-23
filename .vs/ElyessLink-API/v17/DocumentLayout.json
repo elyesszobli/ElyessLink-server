@@ -1,61 +1,61 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\",
+  "WorkspaceRootPath": "C:\\projet_github\\ElyessLink-server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\users\\elyess\\source\\repos\\elyesslink-api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\users\\elyess\\source\\repos\\elyesslink-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\projet_github\\elyesslink-server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\users\\elyess\\source\\repos\\elyesslink-api\\middleware\\authmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:middleware\\authmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\projet_github\\elyesslink-server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\users\\elyess\\source\\repos\\elyesslink-api\\elyesslink-api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:elyesslink-api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\users\\elyess\\source\\repos\\elyesslink-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\users\\elyess\\source\\repos\\elyesslink-api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\users\\elyess\\source\\repos\\elyesslink-api\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\users\\elyess\\source\\repos\\elyesslink-api\\services\\mappers\\tokenmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:services\\mappers\\tokenmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\users\\elyess\\source\\repos\\elyesslink-api\\models\\authtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:models\\authtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\users\\elyess\\source\\repos\\elyesslink-api\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\users\\elyess\\source\\repos\\elyesslink-api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\users\\elyess\\source\\repos\\elyesslink-api\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\users\\elyess\\source\\repos\\elyesslink-api\\dtos\\tokendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\projet_github\\elyesslink-server\\dtos\\tokendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:dtos\\tokendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\users\\elyess\\source\\repos\\elyesslink-api\\migrations\\20241118203211_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\projet_github\\elyesslink-server\\services\\mappers\\tokenmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:services\\mappers\\tokenmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\projet_github\\elyesslink-server\\models\\authtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:models\\authtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\projet_github\\elyesslink-server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\projet_github\\elyesslink-server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\projet_github\\elyesslink-server\\middleware\\authmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:middleware\\authmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\projet_github\\elyesslink-server\\elyesslink-api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:elyesslink-api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\projet_github\\elyesslink-server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\projet_github\\elyesslink-server\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\projet_github\\elyesslink-server\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\projet_github\\elyesslink-server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|c:\\projet_github\\elyesslink-server\\migrations\\20241118203211_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04CE1D0C-739B-4892-9654-51975EB4E732}|ElyessLink-API.csproj|solutionrelative:migrations\\20241118203211_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -74,49 +74,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAcwCgAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T15:00:45.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 6,
               "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Data\\AppDbContext.cs",
+              "DocumentMoniker": "C:\\projet_github\\ElyessLink-server\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\projet_github\\ElyessLink-server\\Data\\AppDbContext.cs",
               "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAA4AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T15:10:16.175Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "AuthMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Middleware\\AuthMiddleware.cs",
+              "DocumentMoniker": "C:\\projet_github\\ElyessLink-server\\Middleware\\AuthMiddleware.cs",
               "RelativeDocumentMoniker": "Middleware\\AuthMiddleware.cs",
-              "ToolTip": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Middleware\\AuthMiddleware.cs",
+              "ToolTip": "C:\\projet_github\\ElyessLink-server\\Middleware\\AuthMiddleware.cs",
               "RelativeToolTip": "Middleware\\AuthMiddleware.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAowCgAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T22:33:15.423Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T22:33:15.423Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Models\\User.cs",
+              "DocumentMoniker": "C:\\projet_github\\ElyessLink-server\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Models\\User.cs",
+              "ToolTip": "C:\\projet_github\\ElyessLink-server\\Models\\User.cs",
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -124,11 +110,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Message.cs",
-              "DocumentMoniker": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Models\\Message.cs",
+              "DocumentMoniker": "C:\\projet_github\\ElyessLink-server\\Models\\Message.cs",
               "RelativeDocumentMoniker": "Models\\Message.cs",
-              "ToolTip": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Models\\Message.cs",
+              "ToolTip": "C:\\projet_github\\ElyessLink-server\\Models\\Message.cs",
               "RelativeToolTip": "Models\\Message.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -136,23 +122,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "TokenMapper.cs",
-              "DocumentMoniker": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Services\\Mappers\\TokenMapper.cs",
+              "DocumentMoniker": "C:\\projet_github\\ElyessLink-server\\Services\\Mappers\\TokenMapper.cs",
               "RelativeDocumentMoniker": "Services\\Mappers\\TokenMapper.cs",
-              "ToolTip": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Services\\Mappers\\TokenMapper.cs",
+              "ToolTip": "C:\\projet_github\\ElyessLink-server\\Services\\Mappers\\TokenMapper.cs",
               "RelativeToolTip": "Services\\Mappers\\TokenMapper.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T23:20:20.794Z"
+              "WhenOpened": "2024-11-14T23:20:20.794Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "UserDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\DTOs\\UserDTO.cs",
+              "DocumentMoniker": "C:\\projet_github\\ElyessLink-server\\DTOs\\UserDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\UserDTO.cs",
-              "ToolTip": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\DTOs\\UserDTO.cs",
+              "ToolTip": "C:\\projet_github\\ElyessLink-server\\DTOs\\UserDTO.cs",
               "RelativeToolTip": "DTOs\\UserDTO.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAmwBMAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -160,87 +147,99 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Controllers\\AuthController.cs",
+              "DocumentMoniker": "C:\\projet_github\\ElyessLink-server\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\projet_github\\ElyessLink-server\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAYwDYAAAARAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADQAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T13:23:49.298Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Program.cs",
+              "DocumentMoniker": "C:\\projet_github\\ElyessLink-server\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Program.cs",
+              "ToolTip": "C:\\projet_github\\ElyessLink-server\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T15:01:35.287Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ElyessLink-API",
-              "DocumentMoniker": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\ElyessLink-API.csproj",
+              "DocumentIndex": 8,
+              "Title": "ElyessLink-API.csproj",
+              "DocumentMoniker": "C:\\projet_github\\ElyessLink-server\\ElyessLink-API.csproj",
               "RelativeDocumentMoniker": "ElyessLink-API.csproj",
-              "ToolTip": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\ElyessLink-API.csproj",
+              "ToolTip": "C:\\projet_github\\ElyessLink-server\\ElyessLink-API.csproj",
               "RelativeToolTip": "ElyessLink-API.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-20T13:19:20.751Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AuthToken.cs",
-              "DocumentMoniker": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Models\\AuthToken.cs",
-              "RelativeDocumentMoniker": "Models\\AuthToken.cs",
-              "ToolTip": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Models\\AuthToken.cs",
-              "RelativeToolTip": "Models\\AuthToken.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T22:57:48.925Z"
+              "WhenOpened": "2024-11-20T13:19:20.751Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-14T15:08:39.801Z",
+              "Title": "AuthToken.cs",
+              "DocumentMoniker": "C:\\projet_github\\ElyessLink-server\\Models\\AuthToken.cs",
+              "RelativeDocumentMoniker": "Models\\AuthToken.cs",
+              "ToolTip": "C:\\projet_github\\ElyessLink-server\\Models\\AuthToken.cs",
+              "RelativeToolTip": "Models\\AuthToken.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T22:57:48.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\projet_github\\ElyessLink-server\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\projet_github\\ElyessLink-server\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-14T15:08:39.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "TokenDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\DTOs\\TokenDTO.cs",
+              "DocumentMoniker": "C:\\projet_github\\ElyessLink-server\\DTOs\\TokenDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\TokenDTO.cs",
-              "ToolTip": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\DTOs\\TokenDTO.cs",
+              "ToolTip": "C:\\projet_github\\ElyessLink-server\\DTOs\\TokenDTO.cs",
               "RelativeToolTip": "DTOs\\TokenDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAWAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T23:13:58.296Z"
+              "WhenOpened": "2024-11-14T23:13:58.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\projet_github\\ElyessLink-server\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\projet_github\\ElyessLink-server\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAcwCgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T15:00:45.877Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "20241118203211_init.cs",
-              "DocumentMoniker": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Migrations\\20241118203211_init.cs",
+              "DocumentMoniker": "C:\\projet_github\\ElyessLink-server\\Migrations\\20241118203211_init.cs",
               "RelativeDocumentMoniker": "Migrations\\20241118203211_init.cs",
-              "ToolTip": "C:\\Users\\Elyess\\source\\repos\\ElyessLink-API\\Migrations\\20241118203211_init.cs",
+              "ToolTip": "C:\\projet_github\\ElyessLink-server\\Migrations\\20241118203211_init.cs",
               "RelativeToolTip": "Migrations\\20241118203211_init.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
