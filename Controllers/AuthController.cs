@@ -67,9 +67,11 @@ namespace ElyessLink_API.Controllers
 
 
         [HttpDelete]
-        public async Task<IActionResult> SignOut(TokenDeletDTO authToken)
+        public async Task<IActionResult> SignOut()
         {
-            var token = _appDbContext.AuthTokens.FirstOrDefault(t => t.token == authToken.Token);
+            var userToken = _httpReponse.HttpContext.Request.Cookies["ElyessLink-cookie"];
+
+            var token = _appDbContext.AuthTokens.FirstOrDefault(t => t.token == userToken);
 
             if(token == null) { return BadRequest("Token not found"); }
 
