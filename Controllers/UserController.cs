@@ -1,6 +1,7 @@
 ﻿using ElyessLink_API.Data;
 using ElyessLink_API.DTOs;
 using ElyessLink_API.Models;
+using ElyessLink_API.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,10 +12,12 @@ namespace ElyessLink_API.Controllers
     public class UserController : ControllerBase
     {
         private readonly AppDbContext _appDbContext;
+        private readonly IRepository<User> _userRepository;
 
-        public UserController (AppDbContext appDbContext)
+        public UserController (AppDbContext appDbContext , IRepository<User> userRepository)
         {
             _appDbContext = appDbContext;
+            _userRepository = userRepository;
         }
 
         [HttpGet]

@@ -2,6 +2,8 @@ using static System.Net.Mime.MediaTypeNames;
 using ElyessLink_API.Data;
 using ElyessLink_API.Services.Mappers;
 using ElyessLink_API.Middleware;
+using ElyessLink_API.Repositories;
+using ElyessLink_API.Models;
 
 
 var Origins = "AuthorizedApps";
@@ -16,6 +18,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddDbContext<AppDbContext>();
 builder.Services.AddScoped<TokenMapper>();
+builder.Services.AddScoped<PostMapper>();
+builder.Services.AddScoped<IRepository<User>,UserRepository>();
 
 builder.Services.AddCors(options =>
 {

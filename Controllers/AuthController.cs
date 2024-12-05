@@ -108,6 +108,17 @@ namespace ElyessLink_API.Controllers
             return user;
         }
 
-        
+        [HttpGet("check-auth")]
+        public IActionResult CheckAuth()
+        {
+            if (_httpReponse.HttpContext.Request.Cookies["ElyessLink-cookie"] != null)
+            {
+                return Ok(new { isLoggedIn = true });
+            }
+
+            return Ok(new { isLoggedIn = false });
+        }
+
+
     }
 }

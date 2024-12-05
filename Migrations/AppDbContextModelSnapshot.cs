@@ -50,6 +50,31 @@ namespace ElyessLink_API.Migrations
                     b.ToTable("AuthTokens");
                 });
 
+            modelBuilder.Entity("ElyessLink_API.Models.Post", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("DateCreat")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("userId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("userId");
+
+                    b.ToTable("Posts");
+                });
+
             modelBuilder.Entity("ElyessLink_API.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -76,6 +101,17 @@ namespace ElyessLink_API.Migrations
                 });
 
             modelBuilder.Entity("ElyessLink_API.Models.AuthToken", b =>
+                {
+                    b.HasOne("ElyessLink_API.Models.User", "user")
+                        .WithMany()
+                        .HasForeignKey("userId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("user");
+                });
+
+            modelBuilder.Entity("ElyessLink_API.Models.Post", b =>
                 {
                     b.HasOne("ElyessLink_API.Models.User", "user")
                         .WithMany()

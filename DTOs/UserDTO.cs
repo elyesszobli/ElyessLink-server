@@ -9,6 +9,7 @@ namespace ElyessLink_API.DTOs
         public string Email { get; set; }
     }
 
+
     public class UserCreateDTO
     {
         public string Username { get; set; }
@@ -22,4 +23,5 @@ namespace ElyessLink_API.DTOs
         public string Email { get; set; }
         public string Password { get; set; }
     }
+
 }
