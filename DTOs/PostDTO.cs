@@ -10,6 +10,7 @@ namespace ElyessLink_API.DTOs
 
     public class PostGetDTO
     {
+        public int Id { get; set; }
         public string Content { get; set; }
        
         public DateTime DateCreat { get; set; }

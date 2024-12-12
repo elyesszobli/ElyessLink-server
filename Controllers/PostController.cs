@@ -4,6 +4,7 @@ using ElyessLink_API.DTOs;
 using ElyessLink_API.Models;
 using ElyessLink_API.Services.Mappers;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 
 namespace ElyessLink_API.Controllers
 {
@@ -30,13 +31,15 @@ namespace ElyessLink_API.Controllers
             {
                 return BadRequest("token non recupere");
             }
-            var token = _appDbContext.AuthTokens.FirstOrDefault(t => t.token == userToken);
-            if (token == null)
+            var _token = _appDbContext.AuthTokens.Include(u => u.user).FirstOrDefault(t => t.token == userToken); 
+
+            if (_token == null)
             {
                 return BadRequest("token non recupere");
             }
 
-            var _user = _appDbContext.Users.FirstOrDefault(t => t.Id == token.user.Id);
+
+            var _user = _appDbContext.Users.FirstOrDefault(t => t.Username == _token.user.Username); 
 
             if(_user == null )
             {
@@ -51,14 +54,25 @@ namespace ElyessLink_API.Controllers
             var post = new Post
             {
                 Content = _post.Content,
-                DateCreat = DateTime.Now,
+                DateCreat = DateTime.UtcNow,
                 user = _user,
             };
+
+            if(post == null)
+            {
+                return BadRequest("Post non crée");
+            }
 
             _appDbContext.Posts.Add(post);
             await _appDbContext.SaveChangesAsync();
             return Ok(_postMapper.PostToDTO(post));
 
+        }
+
+        [HttpGet]
+        public List<Post> getAllPosts()
+        {
+            return _appDbContext.Posts.ToList();
         }
 
     }
