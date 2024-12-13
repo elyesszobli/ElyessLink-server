@@ -70,9 +70,17 @@ namespace ElyessLink_API.Controllers
         }
 
         [HttpGet]
-        public List<Post> getAllPosts()
+        public async Task<IActionResult> GetAllPosts()
         {
-            return _appDbContext.Posts.ToList();
+            {
+                var posts = await _appDbContext.Posts
+                    .Include(p => p.user)
+                    .ToListAsync();
+
+                var postDTOs = posts.Select(post => _postMapper.PostToDTO(post)).ToList();
+
+                return Ok(postDTOs);
+            }
         }
 
     }
