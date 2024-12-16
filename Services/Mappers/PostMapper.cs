@@ -11,6 +11,8 @@ namespace ElyessLink_API.Services.Mappers
             {
                 Content = post.Content,
                 DateCreat = DateTime.Now,
+                ImagePath = post.ImagePath,
+                LikeCount = post.LikeCount,
                 user = new UserGetDTO
                 {
                     Id = post.user.Id,

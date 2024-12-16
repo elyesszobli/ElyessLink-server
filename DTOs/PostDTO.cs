@@ -5,7 +5,7 @@ namespace ElyessLink_API.DTOs
     public class PostAddDTO
     {
         public string Content { get; set; }
-
+        public IFormFile? Image { get; set; }
     }
 
     public class PostGetDTO
@@ -14,6 +14,9 @@ namespace ElyessLink_API.DTOs
         public string Content { get; set; }
        
         public DateTime DateCreat { get; set; }
+
+        public string? ImagePath { get; set; }
+        public int LikeCount { get; set; }
 
         public UserGetDTO user { get; set; }
 

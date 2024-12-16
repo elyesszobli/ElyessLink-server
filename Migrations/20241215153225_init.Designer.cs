@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ElyessLink_API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241205195903_init")]
+    [Migration("20241215153225_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -53,6 +53,29 @@ namespace ElyessLink_API.Migrations
                     b.ToTable("AuthTokens");
                 });
 
+            modelBuilder.Entity("ElyessLink_API.Models.Like", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("PostId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PostId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Likes");
+                });
+
             modelBuilder.Entity("ElyessLink_API.Models.Post", b =>
                 {
                     b.Property<int>("Id")
@@ -67,6 +90,12 @@ namespace ElyessLink_API.Migrations
 
                     b.Property<DateTime>("DateCreat")
                         .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("ImagePath")
+                        .HasColumnType("text");
+
+                    b.Property<int>("LikeCount")
+                        .HasColumnType("integer");
 
                     b.Property<int>("userId")
                         .HasColumnType("integer");
@@ -112,6 +141,25 @@ namespace ElyessLink_API.Migrations
                         .IsRequired();
 
                     b.Navigation("user");
+                });
+
+            modelBuilder.Entity("ElyessLink_API.Models.Like", b =>
+                {
+                    b.HasOne("ElyessLink_API.Models.Post", "Post")
+                        .WithMany()
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ElyessLink_API.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Post");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("ElyessLink_API.Models.Post", b =>

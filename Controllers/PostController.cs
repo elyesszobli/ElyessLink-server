@@ -27,28 +27,38 @@ namespace ElyessLink_API.Controllers
         public async Task<IActionResult> CreatPost(PostAddDTO _post)
         {
             var userToken = _httpReponse.HttpContext.Request.Cookies["ElyessLink-cookie"];
-            if(userToken == null)
+            if (userToken == null)
             {
                 return BadRequest("token non recupere");
             }
-            var _token = _appDbContext.AuthTokens.Include(u => u.user).FirstOrDefault(t => t.token == userToken); 
+            var _token = _appDbContext.AuthTokens.Include(u => u.user).FirstOrDefault(t => t.token == userToken);
 
             if (_token == null)
             {
                 return BadRequest("token non recupere");
             }
 
+            var _user = _appDbContext.Users.FirstOrDefault(t => t.Username == _token.user.Username);
 
-            var _user = _appDbContext.Users.FirstOrDefault(t => t.Username == _token.user.Username); 
-
-            if(_user == null )
+            if (_user == null)
             {
                 return BadRequest("user non recupere");
             }
 
-            if (_post.Content == null)
+            if (string.IsNullOrEmpty(_post.Content))
             {
                 return BadRequest("Rensignz tout les champs");
+            }
+
+            string? imagePath = null;
+            if (_post.Image != null && _post.Image.Length > 0)
+            {
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images_post", _post.Image.FileName);
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await _post.Image.CopyToAsync(stream);
+                }
+                imagePath = "/images_post/" + _post.Image.FileName; 
             }
 
             var post = new Post
@@ -56,17 +66,13 @@ namespace ElyessLink_API.Controllers
                 Content = _post.Content,
                 DateCreat = DateTime.UtcNow,
                 user = _user,
+                ImagePath = imagePath,
+                LikeCount = 0
             };
-
-            if(post == null)
-            {
-                return BadRequest("Post non crée");
-            }
 
             _appDbContext.Posts.Add(post);
             await _appDbContext.SaveChangesAsync();
             return Ok(_postMapper.PostToDTO(post));
-
         }
 
         [HttpGet]
