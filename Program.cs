@@ -19,6 +19,8 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddDbContext<AppDbContext>();
 builder.Services.AddScoped<TokenMapper>();
 builder.Services.AddScoped<PostMapper>();
+builder.Services.AddScoped<MessageMapper>();
+builder.Services.AddScoped<DataReedy>();
 builder.Services.AddScoped<IRepository<User>,UserRepository>();
 
 builder.Services.AddCors(options =>
@@ -35,6 +37,11 @@ builder.Services.AddCors(options =>
 
 
 var app = builder.Build();
+
+using var scope = app.Services.CreateScope();
+var seeder = scope.ServiceProvider.GetRequiredService<DataReedy>();
+await seeder.SeedContext();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

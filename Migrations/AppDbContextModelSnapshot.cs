@@ -73,6 +73,41 @@ namespace ElyessLink_API.Migrations
                     b.ToTable("Likes");
                 });
 
+            modelBuilder.Entity("ElyessLink_API.Models.Message", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("ImagePath")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("boolean");
+
+                    b.Property<int>("UserIsseurId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("UserReciverId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserIsseurId");
+
+                    b.HasIndex("UserReciverId");
+
+                    b.ToTable("Messages");
+                });
+
             modelBuilder.Entity("ElyessLink_API.Models.Post", b =>
                 {
                     b.Property<int>("Id")
@@ -157,6 +192,25 @@ namespace ElyessLink_API.Migrations
                     b.Navigation("Post");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ElyessLink_API.Models.Message", b =>
+                {
+                    b.HasOne("ElyessLink_API.Models.User", "UserIsseur")
+                        .WithMany()
+                        .HasForeignKey("UserIsseurId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ElyessLink_API.Models.User", "UserReciver")
+                        .WithMany()
+                        .HasForeignKey("UserReciverId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UserIsseur");
+
+                    b.Navigation("UserReciver");
                 });
 
             modelBuilder.Entity("ElyessLink_API.Models.Post", b =>
