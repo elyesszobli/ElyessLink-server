@@ -24,29 +24,26 @@ namespace ElyessLink_API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreatMessage(int ReciverId , MessageDTO _message)
+        public async Task<IActionResult> CreatMessage(int ReciverId, MessageDTO _message)
         {
             var userToken = _httpReponse.HttpContext.Request.Cookies["ElyessLink-cookie"];
             if (userToken == null)
             {
-                return BadRequest("token non recupere");
+                return BadRequest("Token non récupéré");
             }
-            var _token = _appDbContext.AuthTokens.Include(u => u.user).FirstOrDefault(t => t.token == userToken);
 
+            var _token = _appDbContext.AuthTokens.Include(u => u.user).FirstOrDefault(t => t.token == userToken);
             if (_token == null)
             {
-                return BadRequest("token non recupere");
+                return BadRequest("Token non récupéré");
             }
 
             var _user = _appDbContext.Users.FirstOrDefault(t => t.Username == _token.user.Username);
-
             if (_user == null)
             {
-                return BadRequest("user non recupere");
+                return BadRequest("Utilisateur non récupéré");
             }
 
-            
-            
             string? imagePath = null;
 
             if (_message.Image != null && _message.Image.Length > 0)
@@ -59,15 +56,15 @@ namespace ElyessLink_API.Controllers
                 imagePath = "/images_message/" + _message.Image.FileName;
             }
 
-            if(_message.Content == null && _message.Image == null)
+            if (_message.Content == null && _message.Image == null)
             {
-                return  BadRequest("Rensignz tout les champs");
+                return BadRequest("Renseignez au moins un champ (contenu ou image)");
             }
 
             var Reciver = _appDbContext.Users.FirstOrDefault(t => t.Id == ReciverId);
             if (Reciver == null)
             {
-                return BadRequest("Reciver non trouve");
+                return BadRequest("Destinataire non trouvé");
             }
 
             var message = new Message
@@ -84,5 +81,6 @@ namespace ElyessLink_API.Controllers
             await _appDbContext.SaveChangesAsync();
             return Ok(_messageMapper.MessageToDTO(message));
         }
+
     }
 }
