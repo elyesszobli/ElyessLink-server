@@ -111,7 +111,11 @@ namespace ElyessLink_API.Controllers
         [HttpGet("check-auth")]
         public IActionResult CheckAuth()
         {
-            if (_httpReponse.HttpContext.Request.Cookies["ElyessLink-cookie"] != null)
+            var userToken = _httpReponse.HttpContext.Request.Cookies["ElyessLink-cookie"];
+
+            var token = _appDbContext.AuthTokens.FirstOrDefault(t => t.token == userToken);
+
+            if (_httpReponse.HttpContext.Request.Cookies["ElyessLink-cookie"] != null && token != null)
             {
                 return Ok(new { isLoggedIn = true });
             }

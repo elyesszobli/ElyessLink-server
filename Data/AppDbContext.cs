@@ -25,5 +25,6 @@ namespace ElyessLink_API.Data
         public DbSet<Post> Posts { get; set; }
         public DbSet<Like> Likes { get; set; }   
         public DbSet<Message> Messages { get; set; }
+        public DbSet<RequestFriends> RequestFriends { get; set; }
     }
 }

@@ -139,6 +139,36 @@ namespace ElyessLink_API.Migrations
                     b.ToTable("Posts");
                 });
 
+            modelBuilder.Entity("ElyessLink_API.Models.RequestFriends", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DateRequest")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("UserIssuerId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("UserReceiverId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserIssuerId");
+
+                    b.HasIndex("UserReceiverId");
+
+                    b.ToTable("RequestFriends");
+                });
+
             modelBuilder.Entity("ElyessLink_API.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -222,6 +252,25 @@ namespace ElyessLink_API.Migrations
                         .IsRequired();
 
                     b.Navigation("user");
+                });
+
+            modelBuilder.Entity("ElyessLink_API.Models.RequestFriends", b =>
+                {
+                    b.HasOne("ElyessLink_API.Models.User", "UserIssuer")
+                        .WithMany()
+                        .HasForeignKey("UserIssuerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ElyessLink_API.Models.User", "UserReceiver")
+                        .WithMany()
+                        .HasForeignKey("UserReceiverId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UserIssuer");
+
+                    b.Navigation("UserReceiver");
                 });
 #pragma warning restore 612, 618
         }
