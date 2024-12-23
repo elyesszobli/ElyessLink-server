@@ -152,5 +152,35 @@ namespace ElyessLink_API.Controllers
             await _appDbContext.SaveChangesAsync();
             return Ok("Demande d'ami supprimée");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> ShowRequest()
+        {
+            var userToken = _httpReponse.HttpContext.Request.Cookies["ElyessLink-cookie"];
+            if (userToken == null)
+            {
+                return BadRequest("Token non récupéré");
+            }
+
+            var _token = _appDbContext.AuthTokens.Include(u => u.user).FirstOrDefault(t => t.token == userToken);
+            if (_token == null)
+            {
+                return BadRequest("Token non récupéré");
+            }
+
+            var _user = _appDbContext.Users.FirstOrDefault(t => t.Username == _token.user.Username);
+            if (_user == null)
+            {
+                return BadRequest("Utilisateur non récupéré");
+            }
+
+            var receivedRequests = _appDbContext.RequestFriends
+                .Include(r => r.UserIssuer)
+                .Include(r => r.UserReceiver)
+                .Where(r => r.UserReceiver.Id == _user.Id && r.Status == "OnHold")
+                .ToList();
+
+            return Ok(receivedRequests);
+        }
     }
 }
