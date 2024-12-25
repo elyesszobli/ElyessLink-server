@@ -17,6 +17,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddDbContext<AppDbContext>();
+builder.Services.AddScoped<UserMapper>();
 builder.Services.AddScoped<TokenMapper>();
 builder.Services.AddScoped<PostMapper>();
 builder.Services.AddScoped<MessageMapper>();

@@ -2,6 +2,7 @@
 using ElyessLink_API.DTOs;
 using ElyessLink_API.Models;
 using ElyessLink_API.Repositories;
+using ElyessLink_API.Services.Mappers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,35 +14,34 @@ namespace ElyessLink_API.Controllers
     {
         private readonly AppDbContext _appDbContext;
         private readonly IRepository<User> _userRepository;
+        private readonly UserMapper _userMapper;
 
-        public UserController (AppDbContext appDbContext , IRepository<User> userRepository)
+        public UserController(AppDbContext appDbContext, IRepository<User> userRepository, UserMapper userMapper)
         {
             _appDbContext = appDbContext;
             _userRepository = userRepository;
+            _userMapper = userMapper;
         }
 
         [HttpGet]
-        public List<User> getAllUsers()
+        public List<UserGetDTO> GetAllUsers()
         {
-            return _appDbContext.Users.ToList();
+            var users = _appDbContext.Users.ToList();
+            return users.Select(user => _userMapper.UserToDTO(user)).ToList();
         }
 
         [HttpGet("{id}")]
         public IActionResult GetUserByID(int id)
         {
-            var response = _appDbContext.Users.FirstOrDefault(user => user.Id == id);
+            var user = _appDbContext.Users.FirstOrDefault(u => u.Id == id);
 
-            if (response == null)
+            if (user == null)
             {
-                return BadRequest("utilisateur introuvable");
+                return BadRequest("Utilisateur introuvable");
             }
-            else
-            {
-                return Ok(response);
-            }
+
+            var userDTO = _userMapper.UserToDTO(user);
+            return Ok(userDTO);
         }
-
-        
-
     }
 }
