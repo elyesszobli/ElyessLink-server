@@ -20,6 +20,7 @@ builder.Services.AddDbContext<AppDbContext>();
 builder.Services.AddScoped<TokenMapper>();
 builder.Services.AddScoped<PostMapper>();
 builder.Services.AddScoped<MessageMapper>();
+builder.Services.AddScoped<RequestFriendsMapper>();
 builder.Services.AddScoped<DataReedy>();
 builder.Services.AddScoped<IRepository<User>,UserRepository>();
 

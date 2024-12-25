@@ -1,6 +1,7 @@
 ﻿using ElyessLink_API.Data;
 using ElyessLink_API.Models;
 using Microsoft.AspNetCore.Mvc;
+using ElyessLink_API.Services.Mappers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 
@@ -12,11 +13,13 @@ namespace ElyessLink_API.Controllers
     {
         private readonly AppDbContext _appDbContext;
         private readonly IHttpContextAccessor _httpReponse;
+        public readonly RequestFriendsMapper _requestFriendsMapper;
 
-        public RequestFriendsController(AppDbContext appDbContext, IHttpContextAccessor httpReponse)
+        public RequestFriendsController(AppDbContext appDbContext, IHttpContextAccessor httpReponse, RequestFriendsMapper requestFriendsMapper)
         {
             _appDbContext = appDbContext;
             _httpReponse = httpReponse;
+            _requestFriendsMapper = requestFriendsMapper;
         }
 
         [HttpPost]
@@ -100,7 +103,7 @@ namespace ElyessLink_API.Controllers
                 return BadRequest("Demande d'ami non trouvée");
             }
 
-            if (requestFriends.UserIssuer.Id != _user.Id)
+            if (requestFriends.UserReceiver.Id != _user.Id)
             {
                 return BadRequest("Vous n'êtes pas autorisé à accepter cette demande");
             }
@@ -154,7 +157,7 @@ namespace ElyessLink_API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> ShowRequest()
+        public async Task<IActionResult> GetReceivedRequests()
         {
             var userToken = _httpReponse.HttpContext.Request.Cookies["ElyessLink-cookie"];
             if (userToken == null)
@@ -180,7 +183,9 @@ namespace ElyessLink_API.Controllers
                 .Where(r => r.UserReceiver.Id == _user.Id && r.Status == "OnHold")
                 .ToList();
 
-            return Ok(receivedRequests);
+            var receivedRequestsDTO = receivedRequests.Select(request => _requestFriendsMapper.RequestFriendsToDTO(request)).ToList();
+
+            return Ok(receivedRequestsDTO);
         }
     }
 }
