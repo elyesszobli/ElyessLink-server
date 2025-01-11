@@ -47,31 +47,45 @@ namespace ElyessLink_API.Controllers
             return Ok(userDTO);
         }
 
-       /* [HttpGet]
-        public IActionResult GetUserInformation()
+        [HttpPut("updateprofilepicture")]
+        public async Task<IActionResult> UpdateProfilePicture(IFormFile profilePicture)
         {
             var userToken = _httpReponse.HttpContext.Request.Cookies["ElyessLink-cookie"];
             if (userToken == null)
             {
-                return BadRequest("token non recupere");
+                return BadRequest("Token non récupéré");
             }
-            var _token = _appDbContext.AuthTokens.Include(u => u.user).FirstOrDefault(t => t.token == userToken);
 
+            var _token = _appDbContext.AuthTokens.Include(u => u.user).FirstOrDefault(t => t.token == userToken);
             if (_token == null)
             {
-                return BadRequest("token non recupere");
+                return BadRequest("Token non récupéré");
             }
 
             var _user = _appDbContext.Users.FirstOrDefault(t => t.Username == _token.user.Username);
-
             if (_user == null)
             {
-                return BadRequest("user non recupere");
+                return BadRequest("Utilisateur non récupéré");
             }
 
-            var userDTO = _userMapper.UserToDTO(_user);
-            return Ok(userDTO);
-        }*/
+            if (profilePicture == null || profilePicture.Length == 0)
+            {
+                return BadRequest("Aucune photo de profil n'a été téléchargée");
+            }
+
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images_profile", profilePicture.FileName);
+            using (var stream = new FileStream(path, FileMode.Create))
+            {
+                await profilePicture.CopyToAsync(stream);
+            }
+
+            _user.ProfilePicturePath = "/images_profile/" + profilePicture.FileName;
+            _appDbContext.Users.Update(_user);
+            await _appDbContext.SaveChangesAsync();
+
+            return Ok("Photo de profil mise à jour avec succès");
+        }
+
     }
 }
 

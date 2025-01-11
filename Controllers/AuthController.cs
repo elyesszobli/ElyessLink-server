@@ -94,22 +94,22 @@ namespace ElyessLink_API.Controllers
         [HttpPost("creatuser")]
         public User CreateUser(UserCreateDTO userDto)
         {
-
             var user = new User()
             {
                 Email = userDto.Email,
                 Username = userDto.Username,
                 Password = userDto.Password,
+                ProfilePicturePath = "default-profile-picture.jpg" 
             };
 
             var hashedPassword = BCrypt.Net.BCrypt.HashPassword(userDto.Password);
             user.Password = hashedPassword;
 
-
             _appDbContext.Users.Add(user);
             _appDbContext.SaveChanges();
             return user;
         }
+
 
         [HttpGet("check-auth")]
         public IActionResult CheckAuth()

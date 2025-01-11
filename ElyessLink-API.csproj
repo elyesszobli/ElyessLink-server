@@ -20,7 +20,6 @@
   <ItemGroup>
     <Folder Include="wwwroot\images_post\" />
     <Folder Include="wwwroot\images_message\" />
-    <Folder Include="wwwroot\images_profil\" />
   </ItemGroup>
 
 </Project>
