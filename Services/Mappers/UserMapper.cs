@@ -12,6 +12,7 @@ namespace ElyessLink_API.Services.Mappers
                 Id = user.Id,
                 Username = user.Username,
                 Email = user.Email,
+                ProfilePicturePath = user.ProfilePicturePath,
             };
         }
     }
