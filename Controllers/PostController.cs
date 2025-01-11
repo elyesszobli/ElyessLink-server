@@ -16,7 +16,7 @@ namespace ElyessLink_API.Controllers
         private readonly AppDbContext _appDbContext;
         private readonly IHttpContextAccessor _httpReponse;
 
-        public PostController (AppDbContext appDbContext, IHttpContextAccessor httpReponse , PostMapper postMapper)
+        public PostController(AppDbContext appDbContext, IHttpContextAccessor httpReponse, PostMapper postMapper)
         {
             _appDbContext = appDbContext;
             _httpReponse = httpReponse;
@@ -58,7 +58,7 @@ namespace ElyessLink_API.Controllers
                 {
                     await _post.Image.CopyToAsync(stream);
                 }
-                imagePath = "/images_post/" + _post.Image.FileName; 
+                imagePath = "/images_post/" + _post.Image.FileName;
             }
 
             var post = new Post
@@ -78,18 +78,13 @@ namespace ElyessLink_API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllPosts()
         {
-            {
-                var posts = await _appDbContext.Posts
-                    .Include(p => p.user)
-                    .ToListAsync();
+            var posts = await _appDbContext.Posts
+                .Include(p => p.user)
+                .ToListAsync();
 
-                var postDTOs = posts.Select(post => _postMapper.PostToDTO(post)).ToList();
+            var postDTOs = posts.Select(post => _postMapper.PostToDTO(post)).ToList();
 
-                return Ok(postDTOs);
-            }
+            return Ok(postDTOs);
         }
-
-
-
     }
 }

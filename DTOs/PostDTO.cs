@@ -1,9 +1,11 @@
 ﻿using ElyessLink_API.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace ElyessLink_API.DTOs
 {
     public class PostAddDTO
     {
+        [Required]
         public string Content { get; set; }
         public IFormFile? Image { get; set; }
     }

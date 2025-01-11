@@ -4,6 +4,7 @@ using ElyessLink_API.DTOs;
 using ElyessLink_API.Models;
 using ElyessLink_API.Services.Mappers;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 
 namespace ElyessLink_API.Controllers
 {
@@ -14,12 +15,14 @@ namespace ElyessLink_API.Controllers
         private readonly AppDbContext _appDbContext;
         private readonly TokenMapper _tokenMapper;
         private readonly IHttpContextAccessor _httpReponse;
+        private readonly UserMapper _userMapper;
 
-        public AuthController(AppDbContext appDbContext, TokenMapper tokenMapper, IHttpContextAccessor httpReponse)
+        public AuthController(AppDbContext appDbContext, TokenMapper tokenMapper, IHttpContextAccessor httpReponse, UserMapper userMapper)
         {
             _appDbContext = appDbContext;
             _tokenMapper = tokenMapper;
             _httpReponse = httpReponse;
+            _userMapper = userMapper;
         }
 
         [HttpPost("signin")]
@@ -121,6 +124,32 @@ namespace ElyessLink_API.Controllers
             }
 
             return Ok(new { isLoggedIn = false });
+        }
+
+        [HttpGet("user-information")]
+        public IActionResult GetUserInformation()
+        {
+            var userToken = _httpReponse.HttpContext.Request.Cookies["ElyessLink-cookie"];
+            if (userToken == null)
+            {
+                return BadRequest("token non recupere");
+            }
+            var _token = _appDbContext.AuthTokens.Include(u => u.user).FirstOrDefault(t => t.token == userToken);
+
+            if (_token == null)
+            {
+                return BadRequest("token non recupere");
+            }
+
+            var _user = _appDbContext.Users.FirstOrDefault(t => t.Username == _token.user.Username);
+
+            if (_user == null)
+            {
+                return BadRequest("user non recupere");
+            }
+
+            var userDTO = _userMapper.UserToDTO(_user);
+            return Ok(userDTO);
         }
 
 

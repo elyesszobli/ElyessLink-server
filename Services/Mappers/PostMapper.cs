@@ -9,6 +9,7 @@ namespace ElyessLink_API.Services.Mappers
         {
             return new PostGetDTO
             {
+                Id = post.Id, 
                 Content = post.Content,
                 DateCreat = DateTime.Now,
                 ImagePath = post.ImagePath,
